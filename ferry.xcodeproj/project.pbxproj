@@ -19,6 +19,12 @@
 		E286186C19CBC11D00E00A9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E286185419CBC11D00E00A9B /* UIKit.framework */; };
 		E286187419CBC11D00E00A9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E286187219CBC11D00E00A9B /* InfoPlist.strings */; };
 		E286187619CBC11D00E00A9B /* ferryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E286187519CBC11D00E00A9B /* ferryTests.m */; };
+		E286188019CBC13000E00A9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E286187F19CBC13000E00A9B /* Main.storyboard */; };
+		E286188B19CBC4EC00E00A9B /* 740-gear-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = E286188919CBC4EC00E00A9B /* 740-gear-toolbar.png */; };
+		E286188C19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E286188A19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png */; };
+		E286189C19CBCBE200E00A9B /* THXTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */; };
+		E286189F19CBD11800E00A9B /* THXRoutesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189E19CBD11800E00A9B /* THXRoutesTableViewController.m */; };
+		E28618A219CBD9E700E00A9B /* THXFerryStatusDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,15 @@
 		E286187119CBC11D00E00A9B /* ferryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ferryTests-Info.plist"; sourceTree = "<group>"; };
 		E286187319CBC11D00E00A9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E286187519CBC11D00E00A9B /* ferryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ferryTests.m; sourceTree = "<group>"; };
+		E286187F19CBC13000E00A9B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E286188919CBC4EC00E00A9B /* 740-gear-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar.png"; sourceTree = "<group>"; };
+		E286188A19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@2x.png"; sourceTree = "<group>"; };
+		E286189A19CBCBE200E00A9B /* THXTimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXTimeTableViewController.h; sourceTree = "<group>"; };
+		E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXTimeTableViewController.m; sourceTree = "<group>"; };
+		E286189D19CBD11800E00A9B /* THXRoutesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXRoutesTableViewController.h; sourceTree = "<group>"; };
+		E286189E19CBD11800E00A9B /* THXRoutesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXRoutesTableViewController.m; sourceTree = "<group>"; };
+		E28618A019CBD9E700E00A9B /* THXFerryStatusDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXFerryStatusDisplay.h; sourceTree = "<group>"; };
+		E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXFerryStatusDisplay.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +126,14 @@
 				E286186019CBC11D00E00A9B /* THXAppDelegate.m */,
 				E286186219CBC11D00E00A9B /* Images.xcassets */,
 				E286185719CBC11D00E00A9B /* Supporting Files */,
+				E286187F19CBC13000E00A9B /* Main.storyboard */,
+				E286189119CBC53700E00A9B /* Icons */,
+				E286189A19CBCBE200E00A9B /* THXTimeTableViewController.h */,
+				E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */,
+				E286189D19CBD11800E00A9B /* THXRoutesTableViewController.h */,
+				E286189E19CBD11800E00A9B /* THXRoutesTableViewController.m */,
+				E28618A019CBD9E700E00A9B /* THXFerryStatusDisplay.h */,
+				E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */,
 			);
 			path = ferry;
 			sourceTree = "<group>";
@@ -142,6 +165,15 @@
 				E286187219CBC11D00E00A9B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E286189119CBC53700E00A9B /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				E286188919CBC4EC00E00A9B /* 740-gear-toolbar.png */,
+				E286188A19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +252,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E286188019CBC13000E00A9B /* Main.storyboard in Resources */,
 				E286185B19CBC11D00E00A9B /* InfoPlist.strings in Resources */,
 				E286186319CBC11D00E00A9B /* Images.xcassets in Resources */,
+				E286188B19CBC4EC00E00A9B /* 740-gear-toolbar.png in Resources */,
+				E286188C19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28618A219CBD9E700E00A9B /* THXFerryStatusDisplay.m in Sources */,
+				E286189C19CBCBE200E00A9B /* THXTimeTableViewController.m in Sources */,
 				E286185D19CBC11D00E00A9B /* main.m in Sources */,
+				E286189F19CBD11800E00A9B /* THXRoutesTableViewController.m in Sources */,
 				E286186119CBC11D00E00A9B /* THXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +476,7 @@
 				E286187B19CBC11D00E00A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E286187C19CBC11D00E00A9B /* Build configuration list for PBXNativeTarget "ferryTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +485,7 @@
 				E286187E19CBC11D00E00A9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
