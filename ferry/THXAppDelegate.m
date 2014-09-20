@@ -12,6 +12,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.routes = [NSMutableArray arrayWithArray:@[@"Birkenhead",
+                                                   @"Northcote Point",
+                                                   @"Bayswater",
+                                                   @"Stanley Point",
+                                                   @"Devonport",
+                                                   @"Half Moon Bay",
+                                                   @"Waiheke",
+                                                   @"Gulf Harbour",
+                                                   @"Beach Haven",
+                                                   @"West Harbour",
+                                                   @"Hobsonville",
+                                                   @"Pine Harbour",
+                                                   @"Rakino"]];
+    self.selectedRoute = @"Bayswater";
+
     return YES;
 }
 

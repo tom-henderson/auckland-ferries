@@ -7,6 +7,7 @@
 //
 
 #import "THXTimeTableViewController.h"
+#import "THXAppDelegate.h"
 #import "THXRoutesTableViewController.h"
 
 @interface THXTimeTableViewController ()
@@ -27,8 +28,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.selectedRoute = @"Bayswater";
-    self.statusDisplay.routeLabel.text = self.selectedRoute;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
+    self.statusDisplay.routeLabel.text = app.selectedRoute;
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,7 +44,6 @@
 
 -(void)unwindToList:(UIStoryboardSegue *)segue
 {
-    self.statusDisplay.routeLabel.text = self.selectedRoute;
 }
 
 #pragma mark - Table view data source
@@ -67,13 +71,11 @@
 
 #pragma mark - Navigation
 
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    THXRoutesTableViewController *dest = (THXRoutesTableViewController *)[segue.destinationViewController topViewController];
-    dest.selectedRoute = self.selectedRoute;
-    
+{    
 }
-
+*/
 
 @end

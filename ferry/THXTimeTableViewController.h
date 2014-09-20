@@ -11,7 +11,6 @@
 
 @interface THXTimeTableViewController : UITableViewController
 
-@property NSString *selectedRoute;
 @property IBOutlet THXFerryStatusDisplay *statusDisplay;
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;

@@ -104,7 +104,7 @@
                     <navigationItem key="navigationItem" title="Ferry Times" id="MMP-zD-Y76">
                         <barButtonItem key="rightBarButtonItem" image="740-gear-toolbar.png" id="BUY-K4-LQZ">
                             <connections>
-                                <segue destination="EhF-XQ-NLz" kind="modal" modalTransitionStyle="flipHorizontal" id="cvm-AS-HcO"/>
+                                <segue destination="EhF-XQ-NLz" kind="modal" modalTransitionStyle="coverVertical" id="cvm-AS-HcO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
