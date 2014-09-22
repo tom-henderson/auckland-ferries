@@ -9,6 +9,7 @@
 #import "THXRoutesTableViewController.h"
 #import "THXAppDelegate.h"
 #import "THXTimeTableViewController.h"
+#import "THXTableViewCellWithSwipeMenu.h"
 
 @interface THXRoutesTableViewController ()
 
@@ -62,7 +63,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table View Data Source Methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -93,6 +94,12 @@
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     app.selectedRoute = [app.routes objectAtIndex:indexPath.row];
+}
+
+#pragma UIScrollViewDelegate Methods
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [[NSNotificationCenter defaultCenter] postNotificationName:THXTableViewCellsShouldHideMenu object:scrollView];
 }
 
 #pragma mark - Navigation

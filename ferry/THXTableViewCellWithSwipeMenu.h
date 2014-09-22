@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const THXTableViewCellsShouldHideMenu;
+
 @interface THXTableViewCellWithSwipeMenu : UITableViewCell
+
+-(void)addButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor;
 
 @end

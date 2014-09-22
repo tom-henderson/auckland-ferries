@@ -8,6 +8,8 @@
 
 #import "THXTableViewCellWithSwipeMenu.h"
 
+NSString *const THXTableViewCellsShouldHideMenu = @"THXTableViewCellsShouldHideMenu";
+
 #define kButtonWidth 74.0f
 #define kDefaultActionThreshold 74.0f // How close to the edge before we transition to the default action?
 
@@ -85,12 +87,14 @@
              backgroundColor:[UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0f]];
 
     [self addButtonWithTitle:@"Flag"
-                  titleColor:[UIColor whiteColor]
-             backgroundColor:[UIColor colorWithRed:0.243 green:0.447 blue:0.651 alpha:1.000]];
+                titleColor:[UIColor whiteColor]
+         backgroundColor:[UIColor colorWithRed:0.243 green:0.447 blue:0.651 alpha:1.000]];
 
     [self addButtonWithTitle:@"More"
-                  titleColor:[UIColor whiteColor]
-             backgroundColor:[UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f]];
+                 titleColor:[UIColor whiteColor]
+           backgroundColor:[UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f]];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideButtons:) name:THXTableViewCellsShouldHideMenu  object:nil];
 }
 
 -(void)addButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor
@@ -124,9 +128,24 @@
     self.scrollViewForegroundView.frame = CGRectMake(0.0f, 0.0f, width, height);
 }
 
+-(void)hideButtons:(NSNotification *)notification
+{
+    // Only if this cell didn't send the notificaiton
+    if (notification.object != self) {
+        [self.scrollView setContentOffset:CGPointZero animated:YES];
+        self.isShowingMenu = NO;
+    }
+}
+
 - (UILabel *)textLabel
 {
     return self.cellTextLabel;
+}
+
+-(void)prepareForReuse
+{
+    [super prepareForReuse];
+    [self.scrollView setContentOffset:CGPointZero animated:NO];
 }
 
 #pragma mark Button Actions
@@ -189,6 +208,10 @@
     }
 }
 
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:THXTableViewCellsShouldHideMenu object:self];
+}
 
 
 @end
