@@ -39,21 +39,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.routes = @[@"1234", @"5233", @"5234", @"5235", @"5236", @"5237", @"5238", @"5239", @"5240", @"5241", @"5252", @"5255", @"6108", @"6456"];
-    self.routeNames = @{@"1234": @"Auckland",
-                        @"5233": @"Birkenhead",
-                        @"5234": @"Northcote Point",
+    self.routes = @[@"6675", @"5235", @"5241", @"5233", @"5237", @"5240", @"5238", @"5255", @"5234", @"6108", @"6456", @"5236", @"5239", @"5252"];
+    self.routeNames = @{
+                        @"6675": @"Auckland City",
                         @"5235": @"Bayswater",
-                        @"5236": @"Stanley Point",
-                        @"5237": @"Devonport",
-                        @"5238": @"Half Moon Bay",
-                        @"5239": @"Waiheke",
-                        @"5240": @"Gulf Harbour",
                         @"5241": @"Beach Haven",
-                        @"5252": @"West Harbour",
+                        @"5233": @"Birkenhead",
+                        @"5237": @"Devonport",
+                        @"5240": @"Gulf Harbour",
+                        @"5238": @"Half Moon Bay",
                         @"5255": @"Hobsonville",
+                        @"5234": @"Northcote Point",
                         @"6108": @"Pine Harbour",
-                        @"6456": @"Rakino"};
+                        @"6456": @"Rakino Island",
+                        @"5236": @"Stanley Point",
+                        @"5239": @"Waiheke Island",
+                        @"5252": @"West Harbour",
+                        };
+
+
     //[self loadData];
     self.selectedRoute = @"5235";
     return YES;
