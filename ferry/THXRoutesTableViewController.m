@@ -83,6 +83,12 @@
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     cell.textLabel.text = [app.routeNames objectForKey:[app.routes objectAtIndex:indexPath.row]];
+
+    if (app.selectedRoute == [app.routes objectAtIndex:indexPath.row]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
