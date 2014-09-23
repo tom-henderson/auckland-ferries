@@ -8,25 +8,53 @@
 
 #import "THXAppDelegate.h"
 
+#define kFerryTerminalStopIDs 
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+#define kRoutesDataURL [NSURL URLWithString:@"http://api.at.govt.nz/v1/gtfs/routes?api_key=20dd655d-2fc6-4930-9992-a8682392ad35"]
+
 @implementation THXAppDelegate
+
+#pragma Data Fetching Methods
+-(void)loadData
+{
+    dispatch_async(kBgQueue, ^{
+        NSData *data = [NSData dataWithContentsOfURL:kRoutesDataURL];
+        [self performSelectorOnMainThread:@selector(fetchedData:) withObject:data waitUntilDone:YES];
+    });
+}
+
+-(void)fetchedData:(NSData *)responseData {
+    NSError *error;
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:responseData
+                                                         options:kNilOptions
+                                                           error:&error];
+    if (error) NSLog(@"%@", error);
+
+    NSArray *routes = [json objectForKey:@"response"];
+
+    NSLog(@"%@", routes);
+}
+
+#pragma Application Delegate Methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.routes = [NSMutableArray arrayWithArray:@[@"Birkenhead",
-                                                   @"Northcote Point",
-                                                   @"Bayswater",
-                                                   @"Stanley Point",
-                                                   @"Devonport",
-                                                   @"Half Moon Bay",
-                                                   @"Waiheke",
-                                                   @"Gulf Harbour",
-                                                   @"Beach Haven",
-                                                   @"West Harbour",
-                                                   @"Hobsonville",
-                                                   @"Pine Harbour",
-                                                   @"Rakino"]];
-    self.selectedRoute = @"Bayswater";
-
+    self.routes = @[@"5233", @"5234", @"5235", @"5236", @"5237", @"5238", @"5239", @"5240", @"5241", @"5252", @"5255", @"6108", @"6456"];
+    self.routeNames = @{@"5233": @"Birkenhead",
+                        @"5234": @"Northcote Point",
+                        @"5235": @"Bayswater",
+                        @"5236": @"Stanley Point",
+                        @"5237": @"Devonport",
+                        @"5238": @"Half Moon Bay",
+                        @"5239": @"Waiheke",
+                        @"5240": @"Gulf Harbour",
+                        @"5241": @"Beach Haven",
+                        @"5252": @"West Harbour",
+                        @"5255": @"Hobsonville",
+                        @"6108": @"Pine Harbour",
+                        @"6456": @"Rakino"};
+    //[self loadData];
+    self.selectedRoute = @"5235";
     return YES;
 }
 

@@ -12,7 +12,11 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property NSMutableArray *routes;
+@property NSArray *routes;
+@property NSDictionary *routeNames;
+
 @property NSString *selectedRoute;
+@property NSMutableArray *selectedRouteTripTimesOut;
+@property NSMutableArray *selectedRouteTripTimesReturn;
 
 @end

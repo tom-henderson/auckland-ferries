@@ -81,7 +81,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"routeCell" forIndexPath:indexPath];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    cell.textLabel.text = [app.routes objectAtIndex:indexPath.row];
+    cell.textLabel.text = [app.routeNames objectForKey:[app.routes objectAtIndex:indexPath.row]];
     
     return cell;
 }
