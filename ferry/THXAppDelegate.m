@@ -39,8 +39,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.routes = @[@"5233", @"5234", @"5235", @"5236", @"5237", @"5238", @"5239", @"5240", @"5241", @"5252", @"5255", @"6108", @"6456"];
-    self.routeNames = @{@"5233": @"Birkenhead",
+    self.routes = @[@"1234", @"5233", @"5234", @"5235", @"5236", @"5237", @"5238", @"5239", @"5240", @"5241", @"5252", @"5255", @"6108", @"6456"];
+    self.routeNames = @{@"1234": @"Auckland",
+                        @"5233": @"Birkenhead",
                         @"5234": @"Northcote Point",
                         @"5235": @"Bayswater",
                         @"5236": @"Stanley Point",

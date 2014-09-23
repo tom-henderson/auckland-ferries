@@ -136,9 +136,10 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Ferry Times" id="MMP-zD-Y76">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="WZ6-ot-v1h"/>
                         <barButtonItem key="rightBarButtonItem" image="740-gear-toolbar.png" id="BUY-K4-LQZ">
                             <connections>
-                                <segue destination="EhF-XQ-NLz" kind="modal" modalTransitionStyle="coverVertical" id="cvm-AS-HcO"/>
+                                <segue destination="mdD-1l-Stp" kind="push" identifier="segueToDepartingTableView" id="Bah-Qh-nbz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -150,7 +151,7 @@
             </objects>
             <point key="canvasLocation" x="475" y="93"/>
         </scene>
-        <!--Select Route-->
+        <!--Departing-->
         <scene sceneID="Qtm-Ny-9Gj">
             <objects>
                 <tableViewController id="mdD-1l-Stp" customClass="THXRoutesTableViewController" sceneMemberID="viewController">
@@ -183,18 +184,16 @@
                             <outlet property="delegate" destination="mdD-1l-Stp" id="pKO-Wa-M4c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select Route" id="aes-PH-8Ey">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="W6T-bW-sjr">
-                            <connections>
-                                <segue destination="boX-f0-yNA" kind="unwind" unwindAction="unwindToList:" id="Wnr-kh-2MK"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Departing" id="aes-PH-8Ey">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="0Qp-qJ-qsQ"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="kCq-rf-mbn" kind="push" identifier="segueToDestinationTableView" id="Hog-p8-8rk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpm-3Q-lbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="boX-f0-yNA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="93"/>
+            <point key="canvasLocation" x="927" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vgr-gY-MBD">
@@ -218,23 +217,46 @@
             </objects>
             <point key="canvasLocation" x="58" y="93"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="jwO-Cs-NEA">
+        <!--Destination-->
+        <scene sceneID="DDV-H1-zKr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EhF-XQ-NLz" sceneMemberID="viewController">
+                <tableViewController id="kCq-rf-mbn" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7rt-K9-bwc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="routeCell" textLabel="55h-02-BX2" style="IBUITableViewCellStyleDefault" id="vwz-YH-GHS">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vwz-YH-GHS" id="r3m-UI-Kpe">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="55h-02-BX2">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="kCq-rf-mbn" id="2oW-n0-a5s"/>
+                            <outlet property="delegate" destination="kCq-rf-mbn" id="epR-bv-Tnd"/>
+                        </connections>
+                    </tableView>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n2y-l8-8ba">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mdD-1l-Stp" kind="relationship" relationship="rootViewController" id="bmz-Dv-nqG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F4m-f4-OSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationItem key="navigationItem" title="Destination" id="xg4-V5-srr"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAu-EN-IMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="93"/>
+            <point key="canvasLocation" x="1393" y="93"/>
         </scene>
     </scenes>
     <resources>

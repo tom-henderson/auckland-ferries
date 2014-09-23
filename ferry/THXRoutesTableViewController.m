@@ -54,6 +54,7 @@
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[app.routes indexOfObject:app.selectedRoute]
                                                  inSection:0];
+    NSLog(@"%@", app.selectedRoute);
     [self selectCellAtIndexPath:indexPath];
 }
 
