@@ -54,7 +54,6 @@
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[app.routes indexOfObject:app.selectedDepartureTerminal]
                                                  inSection:0];
-    NSLog(@"%@", app.selectedDepartureTerminal);
     [self selectCellAtIndexPath:indexPath];
 }
 
@@ -82,7 +81,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"routeCell" forIndexPath:indexPath];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    cell.textLabel.text = [app.routeNames objectForKey:[app.routes objectAtIndex:indexPath.row]];
+    cell.textLabel.text = [app.stopNames objectForKey:[app.routes objectAtIndex:indexPath.row]];
 
     if (app.selectedDepartureTerminal == [app.routes objectAtIndex:indexPath.row]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;

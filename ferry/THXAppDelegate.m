@@ -40,8 +40,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.routes = @[@"0", @"5235", @"5241", @"5233", @"5237", @"5240", @"5238", @"5255", @"5234", @"6108", @"6456", @"5236", @"5408", @"5239", @"5252"];
-    self.routeNames = @{
+    self.stopNames = @{
                         @"0": @"Auckland City",
+                        @"5371": @"Auckland City Pier 1",
+                        @"5975": @"Auckland City Pier 2",
+                        @"5374": @"Auckland City Pier 3",
+                        @"5375": @"Auckland City Pier 4",
                         @"5235": @"Bayswater",
                         @"5241": @"Beach Haven",
                         @"5233": @"Birkenhead",

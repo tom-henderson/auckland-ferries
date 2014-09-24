@@ -18,7 +18,7 @@ typedef enum {
 @property (strong, nonatomic) UIWindow *window;
 
 @property NSArray *routes;
-@property NSDictionary *routeNames;
+@property NSDictionary *stopNames;
 
 @property NSString *selectedDepartureTerminal;
 @property NSString *selectedDestinationTerminal;

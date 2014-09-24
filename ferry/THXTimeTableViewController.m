@@ -33,7 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    self.statusDisplay.routeLabel.text = [app.routeNames objectForKey:app.selectedDepartureTerminal];
+    self.statusDisplay.routeLabel.text = [app.stopNames objectForKey:app.selectedDepartureTerminal];
 }
 
 - (void)didReceiveMemoryWarning
