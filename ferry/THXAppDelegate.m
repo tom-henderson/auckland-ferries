@@ -39,10 +39,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.routes = @[@"0", @"5235", @"5241", @"5233", @"5237", @"5240", @"5238", @"5255", @"5234", @"6108", @"6456", @"5236", @"5408", @"5239", @"5252"];
+    self.routes = @[@"0000", @"5235", @"5241", @"5233", @"5237", @"5240", @"5238", @"5255", @"5234", @"6108", @"6456", @"5236", @"5408", @"5239", @"5252"];
     self.stopNames = @{
-                        @"0": @"Auckland City",
+                        @"0000": @"Auckland City",
                         @"5371": @"Auckland City Pier 1",
+                        @"5370": @"Auckland City Pier 2 (Arrive)",
                         @"5975": @"Auckland City Pier 2",
                         @"5374": @"Auckland City Pier 3",
                         @"5375": @"Auckland City Pier 4",
@@ -61,10 +62,26 @@
                         @"5239": @"Waiheke Island",
                         @"5252": @"West Harbour",
                         };
+    self.possibleDestinations = @{
+                          @"0000": @[@"5233", @"5234", @"5235", @"5236", @"5237", @"5238", @"5239", @"5240", @"5241", @"5252", @"5255", @"6108", @"6456"],
+                          @"5233": @[@"0000", @"5234"],
+                          @"5234": @[@"0000", @"5233"],
+                          @"5235": @[@"0000"],
+                          @"5236": @[@"0000"],
+                          @"5237": @[@"0000", @"5239"],
+                          @"5238": @[@"0000"],
+                          @"5239": @[@"0000", @"5237"],
+                          @"5240": @[@"0000", @"5408"],
+                          @"5241": @[@"0000", @"5255"],
+                          @"5252": @[@"0000"],
+                          @"5255": @[@"0000", @"5241"],
+                          @"6108": @[@"0000"],
+                          @"6456": @[@"0000"]
+                          };
 
     //[self loadData];
     self.selectedDepartureTerminal = @"5235";
-    self.selectedDestinationTerminal = @"6675";
+    self.selectedDestinationTerminal = @"0000";
     self.travelDirection = THXTravelDirectionOutbound;
     return YES;
 }
