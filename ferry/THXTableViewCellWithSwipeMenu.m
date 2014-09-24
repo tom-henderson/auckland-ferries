@@ -94,7 +94,10 @@ NSString *const THXTableViewCellsShouldHideMenu = @"THXTableViewCellsShouldHideM
                  titleColor:[UIColor whiteColor]
            backgroundColor:[UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0f]];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideButtons:) name:THXTableViewCellsShouldHideMenu  object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(hideButtons:)
+                                                 name:THXTableViewCellsShouldHideMenu
+                                               object:nil];
 }
 
 -(void)addButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor

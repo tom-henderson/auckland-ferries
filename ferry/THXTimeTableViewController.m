@@ -8,11 +8,6 @@
 
 #import "THXTimeTableViewController.h"
 #import "THXAppDelegate.h"
-#import "THXRoutesTableViewController.h"
-
-@interface THXTimeTableViewController ()
-
-@end
 
 @implementation THXTimeTableViewController
 
