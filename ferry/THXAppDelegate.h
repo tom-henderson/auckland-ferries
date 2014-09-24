@@ -15,7 +15,7 @@
 @property NSArray *routes;
 @property NSDictionary *routeNames;
 
-@property NSString *selectedRoute;
+@property NSString *selectedDepartureTerminal;
 @property NSMutableArray *selectedRouteTripTimesOut;
 @property NSMutableArray *selectedRouteTripTimesReturn;
 

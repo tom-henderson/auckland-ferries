@@ -52,9 +52,9 @@
     [self.navigationController.navigationBar.layer removeAllAnimations];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[app.routes indexOfObject:app.selectedRoute]
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[app.routes indexOfObject:app.selectedDepartureTerminal]
                                                  inSection:0];
-    NSLog(@"%@", app.selectedRoute);
+    NSLog(@"%@", app.selectedDepartureTerminal);
     [self selectCellAtIndexPath:indexPath];
 }
 
@@ -84,7 +84,7 @@
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     cell.textLabel.text = [app.routeNames objectForKey:[app.routes objectAtIndex:indexPath.row]];
 
-    if (app.selectedRoute == [app.routes objectAtIndex:indexPath.row]) {
+    if (app.selectedDepartureTerminal == [app.routes objectAtIndex:indexPath.row]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -100,7 +100,7 @@
     [self selectCellAtIndexPath:indexPath];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    app.selectedRoute = [app.routes objectAtIndex:indexPath.row];
+    app.selectedDepartureTerminal = [app.routes objectAtIndex:indexPath.row];
 }
 
 #pragma UIScrollViewDelegate Methods

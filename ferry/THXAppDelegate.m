@@ -59,7 +59,7 @@
 
 
     //[self loadData];
-    self.selectedRoute = @"5235";
+    self.selectedDepartureTerminal = @"5235";
     return YES;
 }
 
