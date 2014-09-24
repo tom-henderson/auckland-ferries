@@ -13,6 +13,6 @@
 
 @property IBOutlet THXFerryStatusDisplay *statusDisplay;
 
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+- (IBAction)unwindToTimeTable:(UIStoryboardSegue *)segue;
 
 @end

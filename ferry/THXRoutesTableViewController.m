@@ -100,6 +100,10 @@
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     app.selectedDepartureTerminal = [app.routes objectAtIndex:indexPath.row];
+
+    if ([[app.possibleDestinations objectForKey:app.selectedDepartureTerminal] count] == 1) {
+        [self performSegueWithIdentifier:@"unwindToTimeTable" sender:self];
+    }
 }
 
 #pragma UIScrollViewDelegate Methods

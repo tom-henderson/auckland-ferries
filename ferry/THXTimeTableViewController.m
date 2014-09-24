@@ -42,7 +42,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)unwindToList:(UIStoryboardSegue *)segue
+-(void)unwindToTimeTable:(UIStoryboardSegue *)segue
 {
 }
 
