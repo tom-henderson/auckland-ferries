@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Tom Henderson. All rights reserved.
 //
 
+typedef enum {
+    THXTravelDirectionOutbound = 0,
+    THXTravelDirectionReturn
+} THXTravelDirection;
+
 #import <UIKit/UIKit.h>
 
 @interface THXAppDelegate : UIResponder <UIApplicationDelegate>
@@ -16,6 +21,9 @@
 @property NSDictionary *routeNames;
 
 @property NSString *selectedDepartureTerminal;
+@property NSString *selectedDestinationTerminal;
+@property THXTravelDirection travelDirection;
+
 @property NSMutableArray *selectedRouteTripTimesOut;
 @property NSMutableArray *selectedRouteTripTimesReturn;
 

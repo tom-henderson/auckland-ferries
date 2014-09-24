@@ -57,9 +57,10 @@
                         @"5252": @"West Harbour",
                         };
 
-
     //[self loadData];
     self.selectedDepartureTerminal = @"5235";
+    self.selectedDestinationTerminal = @"6675";
+    self.travelDirection = THXTravelDirectionOutbound;
     return YES;
 }
 
