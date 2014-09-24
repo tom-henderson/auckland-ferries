@@ -25,6 +25,7 @@
 		E286189C19CBCBE200E00A9B /* THXTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */; };
 		E286189F19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189E19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m */; };
 		E28618A219CBD9E700E00A9B /* THXFerryStatusDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */; };
+		E2F8A62619D2C2F600FA6354 /* THXDestinationTerminalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F8A62519D2C2F600FA6354 /* THXDestinationTerminalTableViewController.m */; };
 		E2FFFD8A19CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFD8919CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,8 @@
 		E286189E19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXDepartureTerminalTableViewController.m; sourceTree = "<group>"; };
 		E28618A019CBD9E700E00A9B /* THXFerryStatusDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXFerryStatusDisplay.h; sourceTree = "<group>"; };
 		E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXFerryStatusDisplay.m; sourceTree = "<group>"; };
+		E2F8A62419D2C2F600FA6354 /* THXDestinationTerminalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXDestinationTerminalTableViewController.h; sourceTree = "<group>"; };
+		E2F8A62519D2C2F600FA6354 /* THXDestinationTerminalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXDestinationTerminalTableViewController.m; sourceTree = "<group>"; };
 		E2FFFD8819CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXTableViewCellWithSwipeMenu.h; sourceTree = "<group>"; };
 		E2FFFD8919CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXTableViewCellWithSwipeMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +138,8 @@
 				E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */,
 				E286189D19CBD11800E00A9B /* THXDepartureTerminalTableViewController.h */,
 				E286189E19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m */,
+				E2F8A62419D2C2F600FA6354 /* THXDestinationTerminalTableViewController.h */,
+				E2F8A62519D2C2F600FA6354 /* THXDestinationTerminalTableViewController.m */,
 				E28618A019CBD9E700E00A9B /* THXFerryStatusDisplay.h */,
 				E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */,
 				E2FFFD8B19CE955300C0FD47 /* THXTableViewCellWithSwipeMenu */,
@@ -288,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F8A62619D2C2F600FA6354 /* THXDestinationTerminalTableViewController.m in Sources */,
 				E28618A219CBD9E700E00A9B /* THXFerryStatusDisplay.m in Sources */,
 				E286189C19CBCBE200E00A9B /* THXTimeTableViewController.m in Sources */,
 				E2FFFD8A19CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m in Sources */,

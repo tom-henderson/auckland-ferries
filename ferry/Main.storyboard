@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MKz-Vg-qCl">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -222,7 +221,7 @@
         <!--Destination-->
         <scene sceneID="DDV-H1-zKr">
             <objects>
-                <tableViewController id="kCq-rf-mbn" sceneMemberID="viewController">
+                <tableViewController id="kCq-rf-mbn" customClass="THXDestinationTerminalTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7rt-K9-bwc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,8 +254,12 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Destination" id="xg4-V5-srr"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="tV4-jv-xO4" kind="unwind" identifier="unwindToTimeTable" unwindAction="unwindToTimeTable:" id="KXZ-f7-chp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAu-EN-IMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tV4-jv-xO4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1393" y="93"/>
         </scene>

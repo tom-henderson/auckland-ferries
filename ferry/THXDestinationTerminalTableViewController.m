@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 Tom Henderson. All rights reserved.
 //
 
-#import "THXDepartureTerminalTableViewController.h"
+#import "THXDestinationTerminalTableViewController.h"
 #import "THXAppDelegate.h"
 #import "THXTimeTableViewController.h"
 #import "THXTableViewCellWithSwipeMenu.h"
 
-@interface THXDepartureTerminalTableViewController ()
+@interface THXDestinationTerminalTableViewController ()
 
 @property NSMutableArray *routes;
 
 @end
 
-@implementation THXDepartureTerminalTableViewController
+@implementation THXDestinationTerminalTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -50,11 +50,6 @@
 {
     // Workaround #1 for jumpy navbar
     [self.navigationController.navigationBar.layer removeAllAnimations];
-
-    THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[app.routes indexOfObject:app.selectedDepartureTerminal]
-                                                 inSection:0];
-    [self setCheckmarkForRowAtIndexPath:indexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +68,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    return app.routes.count;
+    return [[app.possibleDestinations objectForKey:app.selectedDepartureTerminal] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,9 +76,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"routeCell" forIndexPath:indexPath];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    cell.textLabel.text = [app.stopNames objectForKey:[app.routes objectAtIndex:indexPath.row]];
+    cell.textLabel.text = [app.stopNames objectForKey:[[app.possibleDestinations objectForKey:app.selectedDepartureTerminal] objectAtIndex:indexPath.row]];
 
-    if (app.selectedDepartureTerminal == [app.routes objectAtIndex:indexPath.row]) {
+    if (app.selectedDestinationTerminal == [[app.possibleDestinations objectForKey:app.selectedDepartureTerminal] objectAtIndex:indexPath.row]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -99,14 +94,9 @@
     [self setCheckmarkForRowAtIndexPath:indexPath];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
-    app.selectedDepartureTerminal = [app.routes objectAtIndex:indexPath.row];
+    app.selectedDestinationTerminal = [[app.possibleDestinations objectForKey:app.selectedDepartureTerminal] objectAtIndex:indexPath.row];
 
-    if ([[app.possibleDestinations objectForKey:app.selectedDepartureTerminal] count] == 1) {
-        app.selectedDestinationTerminal = @"0000";
-        [self performSegueWithIdentifier:@"unwindToTimeTable" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"segueToDestinationTableView" sender:self];
-    }
+    [self performSegueWithIdentifier:@"unwindToTimeTable" sender:self];
 }
 
 #pragma UIScrollViewDelegate Methods
