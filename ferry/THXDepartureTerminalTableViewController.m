@@ -1,5 +1,5 @@
 //
-//  THXRoutesTableViewController.m
+//  THXDepartureTerminalTableViewController.m
 //  ferry
 //
 //  Created by Tom Henderson on 19/09/14.
