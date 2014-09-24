@@ -39,9 +39,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.routes = @[@"6675", @"5235", @"5241", @"5233", @"5237", @"5240", @"5238", @"5255", @"5234", @"6108", @"6456", @"5236", @"5239", @"5252"];
+    self.routes = @[@"0", @"5235", @"5241", @"5233", @"5237", @"5240", @"5238", @"5255", @"5234", @"6108", @"6456", @"5236", @"5408", @"5239", @"5252"];
     self.routeNames = @{
-                        @"6675": @"Auckland City",
+                        @"0": @"Auckland City",
                         @"5235": @"Bayswater",
                         @"5241": @"Beach Haven",
                         @"5233": @"Birkenhead",
@@ -53,6 +53,7 @@
                         @"6108": @"Pine Harbour",
                         @"6456": @"Rakino Island",
                         @"5236": @"Stanley Point",
+                        @"5408": @"Tiri Tiri Matangi",
                         @"5239": @"Waiheke Island",
                         @"5252": @"West Harbour",
                         };
