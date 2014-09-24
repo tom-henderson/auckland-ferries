@@ -6,18 +6,18 @@
 //  Copyright (c) 2014 Tom Henderson. All rights reserved.
 //
 
-#import "THXRoutesTableViewController.h"
+#import "THXDepartureTerminalTableViewController.h"
 #import "THXAppDelegate.h"
 #import "THXTimeTableViewController.h"
 #import "THXTableViewCellWithSwipeMenu.h"
 
-@interface THXRoutesTableViewController ()
+@interface THXDepartureTerminalTableViewController ()
 
 @property NSMutableArray *routes;
 
 @end
 
-@implementation THXRoutesTableViewController
+@implementation THXDepartureTerminalTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

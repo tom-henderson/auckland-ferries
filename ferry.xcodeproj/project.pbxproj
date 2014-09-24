@@ -23,7 +23,7 @@
 		E286188B19CBC4EC00E00A9B /* 740-gear-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = E286188919CBC4EC00E00A9B /* 740-gear-toolbar.png */; };
 		E286188C19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E286188A19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png */; };
 		E286189C19CBCBE200E00A9B /* THXTimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */; };
-		E286189F19CBD11800E00A9B /* THXRoutesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189E19CBD11800E00A9B /* THXRoutesTableViewController.m */; };
+		E286189F19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E286189E19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m */; };
 		E28618A219CBD9E700E00A9B /* THXFerryStatusDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */; };
 		E2FFFD8A19CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FFFD8919CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m */; };
 /* End PBXBuildFile section */
@@ -60,8 +60,8 @@
 		E286188A19CBC4EC00E00A9B /* 740-gear-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "740-gear-toolbar@2x.png"; sourceTree = "<group>"; };
 		E286189A19CBCBE200E00A9B /* THXTimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXTimeTableViewController.h; sourceTree = "<group>"; };
 		E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXTimeTableViewController.m; sourceTree = "<group>"; };
-		E286189D19CBD11800E00A9B /* THXRoutesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXRoutesTableViewController.h; sourceTree = "<group>"; };
-		E286189E19CBD11800E00A9B /* THXRoutesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXRoutesTableViewController.m; sourceTree = "<group>"; };
+		E286189D19CBD11800E00A9B /* THXDepartureTerminalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXDepartureTerminalTableViewController.h; sourceTree = "<group>"; };
+		E286189E19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXDepartureTerminalTableViewController.m; sourceTree = "<group>"; };
 		E28618A019CBD9E700E00A9B /* THXFerryStatusDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXFerryStatusDisplay.h; sourceTree = "<group>"; };
 		E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THXFerryStatusDisplay.m; sourceTree = "<group>"; };
 		E2FFFD8819CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THXTableViewCellWithSwipeMenu.h; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 				E286189119CBC53700E00A9B /* Icons */,
 				E286189A19CBCBE200E00A9B /* THXTimeTableViewController.h */,
 				E286189B19CBCBE200E00A9B /* THXTimeTableViewController.m */,
-				E286189D19CBD11800E00A9B /* THXRoutesTableViewController.h */,
-				E286189E19CBD11800E00A9B /* THXRoutesTableViewController.m */,
+				E286189D19CBD11800E00A9B /* THXDepartureTerminalTableViewController.h */,
+				E286189E19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m */,
 				E28618A019CBD9E700E00A9B /* THXFerryStatusDisplay.h */,
 				E28618A119CBD9E700E00A9B /* THXFerryStatusDisplay.m */,
 				E2FFFD8B19CE955300C0FD47 /* THXTableViewCellWithSwipeMenu */,
@@ -292,7 +292,7 @@
 				E286189C19CBCBE200E00A9B /* THXTimeTableViewController.m in Sources */,
 				E2FFFD8A19CE954D00C0FD47 /* THXTableViewCellWithSwipeMenu.m in Sources */,
 				E286185D19CBC11D00E00A9B /* main.m in Sources */,
-				E286189F19CBD11800E00A9B /* THXRoutesTableViewController.m in Sources */,
+				E286189F19CBD11800E00A9B /* THXDepartureTerminalTableViewController.m in Sources */,
 				E286186119CBC11D00E00A9B /* THXAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

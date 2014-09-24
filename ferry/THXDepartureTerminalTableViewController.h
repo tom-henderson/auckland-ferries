@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface THXRoutesTableViewController : UITableViewController
+@interface THXDepartureTerminalTableViewController : UITableViewController
 
 @property NSString *selectedRoute;
 
