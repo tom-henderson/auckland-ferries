@@ -28,7 +28,7 @@
     return self;
 }
 
-- (void)selectCellAtIndexPath:(NSIndexPath *)indexPath
+- (void)setCheckmarkForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
 
@@ -54,7 +54,7 @@
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[app.routes indexOfObject:app.selectedDepartureTerminal]
                                                  inSection:0];
-    [self selectCellAtIndexPath:indexPath];
+    [self setCheckmarkForRowAtIndexPath:indexPath];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,7 +96,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    [self selectCellAtIndexPath:indexPath];
+    [self setCheckmarkForRowAtIndexPath:indexPath];
 
     THXAppDelegate *app = [[UIApplication sharedApplication] delegate];
     app.selectedDepartureTerminal = [app.routes objectAtIndex:indexPath.row];
