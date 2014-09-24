@@ -10,7 +10,7 @@
 
 #define kFerryTerminalStopIDs 
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-#define kRoutesDataURL [NSURL URLWithString:@"http://api.at.govt.nz/v1/gtfs/routes?api_key=20dd655d-2fc6-4930-9992-a8682392ad35"]
+#define kRoutesDataURL [NSURL URLWithString:@"http://api.at.govt.nz/v1/gtfs/routes?api_key="]
 
 @implementation THXAppDelegate
 
